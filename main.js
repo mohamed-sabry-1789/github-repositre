@@ -8,7 +8,7 @@ getButton.addEventListener("click", getRepos)
 let prperyData = {
     "id": "id",
     "name": "name",
-    "satr": "stargazers_count",
+    "star": "stargazers_count",
     "private": "private"
 
 }
