@@ -28,7 +28,7 @@ function getRepos() {
             let thead = document.createElement("thead")
             let thdLink = document.createElement("th")
             thdLink.append("link")
-            Object.entries(prperyData).forEach(([key]) => {
+            Object.keys(prperyData).forEach((key) => {
                 let th = document.createElement("th")
                 th.append(key)
                 fragmentThead.append(th, thdLink)
@@ -38,7 +38,7 @@ function getRepos() {
             data.forEach((repo) => {
 
                 let tr = document.createElement("tr")
-                Object.entries(prperyData).forEach(([, value]) => {
+                Object.values(prperyData).forEach((value) => {
                     let td = document.createElement("td")
                     let textData = document.createTextNode(repo[value])
                     td.append(textData)
