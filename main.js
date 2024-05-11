@@ -17,7 +17,7 @@ function getRepos() {
     if (theInput.value === "") {
         reposData.innerHTML = "Please Write Your Username."
     } else {
-        fetch(`https://api.github.com/users/${theInput.value}/repos`).then((repos) => {
+        fetch(`https://api.github.com/users/${theInput.value}/repos?per_page=1000`).then((repos) => {
             return repos.json()
         }).then((data) => {
             const fragmentThead = document.createDocumentFragment()
